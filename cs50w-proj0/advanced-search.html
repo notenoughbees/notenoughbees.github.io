@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Boogle Advanced Search</title>
+        <link rel="icon" type="image/favicon" href="image/favicon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="flex-container-outer">
+            <a href="https://doodles.google/"><img src="image/logo.png" id="logoSmall"></a>
+            <div class="flex-container-inner">
+                <a href="index.html"><button class="button button-top">Search</button></a>
+                <a href="image-search.html"><button class="button button-top">Image Search</button></a>  
+            </div>
+        </div>
+
+        <h3>Advanced Search</h3>
+        <h4>Find pages with...</h4>
+        <form action="https://www.google.com/search" id="form-adv-search"> <!-- when the form is submitted, send the data to the given url -->
+            <table>
+                <tr>
+                    <td>
+                        all these words:
+                    </td>
+                    <td>
+                        <!-- the url we get when we go to google.com/advanced_search and enter hi;hello;bonjour;goodbye: https://www.google.com/search?as_q=hi&as_epq=hello&as_oq=bonjour&as_eq=goodbye&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&as_filetype=&tbs= -->
+                        <input class="inputBox" type="text" name="as_q">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        this exact word or phrase:
+                        <td>
+                            <input class="inputBox" type="text" name="as_epq">
+                        </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        any of these words:
+                        <td>
+                            <input class="inputBox" type="text" name="as_oq">
+                        </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        none of these words:
+                        <td>
+                            <input class="inputBox" type="text" name="as_eq">
+                        </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="advBtnContainer">
+                        <input class="button buttonBlue" type="submit" value="Advanced Search">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

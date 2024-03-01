@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Boogle Image Search</title>
+        <link rel="icon" type="image/favicon" href="image/favicon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="flex-container-inner">
+            <a href="index.html"><button class="button button-top">Search</button></a>
+            <a href="advanced-search.html"><button class="button button-top">Advanced Search</button></a>
+        </div>
+
+
+        <a href="https://doodles.google/"><img src="image/logo.png" id="logo"></a>
+        <form action="https://www.google.com/search">
+            <input id="searchBox" class="searchInput" type="text" name="q" placeholder="🔍">
+            <br>
+
+            <!-- this is the url we get when we go to the google images tab and search 'hello': https://www.google.com/search?q=hello&tbm=isch&ved=2ahUKEwjJ8p2GvdKEAxUmrGMGHXHsDDgQ2-cCegQIABAA&oq=hello&gs_lp=EgNpbWciBWhlbGxvMgQQIxgnMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMgoQABiABBiKBRhDMggQABiABBixA0jrC1CHBli3CnAAeACQAQCYAc0CoAH6CaoBBTItNC4xuAEDyAEA-AEBigILZ3dzLXdpei1pbWfCAgUQABiABMICDRAAGIAEGIoFGEMYsQOIBgE&sclient=img&ei=HHvhZcn0HabYjuMP8dizwAM&bih=806&biw=719&client=firefox-b-d -->
+            <!-- solution: go thru all params of this url and see which ones we need for boogle to go to google images! -->
+
+            <!--<input type="hidden" name="sclient" value="img">--> <!-- hidden input: adds additional data to the form when submitted. https://www.w3schools.com/tags/att_input_type_hidden.asp -->
+            <!-- tbm: Term By Method: tbm=isch for image search!!! https://stenevang.wordpress.com/2013/02/22/google-advanced-power-search-url-request-parameters/ -->
+            <!-- some other params: https://stackoverflow.com/questions/69660435/what-are-the-components-of-a-google-com-url-string -->
+            <input type="hidden" name="tbm" value="isch">
+            
+            <input class="searchInput button" type="submit" value="Boogle Image Search">
+        </form>
+    </body>
+</html>

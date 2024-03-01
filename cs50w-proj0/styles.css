@@ -1,0 +1,108 @@
+#logo {
+    width: 250px;
+    /* center an image: https://www.freecodecamp.org/news/how-to-center-an-image-in-css/ */
+    margin: auto;
+    margin-top: 100px;
+    display: block;
+}
+
+form {
+    text-align: center;
+}
+
+.searchInput:hover {
+    border: darkgray solid 1px;
+    box-shadow: 1px 1px 1px darkgray
+}
+
+#searchBox {
+    border: darkgray solid 1px;
+    border-radius: 100px;
+    margin: 30px;
+    width: 500px;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.button {
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 5px 0 5px;
+    background-color: #f5f5f5;
+}
+
+.flex-container-outer {
+    display: flex; /* enable flexbox on the element containing the elements to be flexed */
+    justify-content: space-between; /* align to right */
+}
+
+.flex-container-inner {
+    display: flex; /* enable flexbox on the element containing the elements to be flexed */
+    justify-content: flex-end; /* align to right */
+}
+
+.button-top {
+    background-color: white;
+}
+
+.button-top:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* ADVANCED SEARCH */
+#logoSmall {
+    padding: 10px;
+    width: 75px;
+}
+
+h3 {
+    color: #CC0000;
+    font-weight: normal;
+    font-family: Calibri, sans-serif;
+    font-size: 22px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+}
+
+h4 {
+    font-weight: normal;
+    font-family: Calibri, sans-serif;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-bottom: 6px;
+}
+
+td {
+    text-align: left;
+    font-size: 14px;
+    font-family: Calibri, sans-serif;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 6px;
+}
+
+
+#form-adv-search {
+    margin-left: 30px;
+}
+
+.inputBox {
+    height: 25px;
+    width: 350px; /*TODO: make responsive */
+}
+
+.buttonBlue {
+    background-color: #0088ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 0px;
+}
+
+#advBtnContainer {
+    text-align: right;
+}

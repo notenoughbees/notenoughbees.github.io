@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Boogle Search</title>
+        <link rel="icon" type="image/favicon" href="image/favicon.png">
+        <link rel="stylesheet" href="styles.css"> <!-- "relationship" -->
+    </head>
+    <body>
+        <div class="flex-container-inner">
+            <a href="image-search.html"><button class="button button-top">Image Search</button></a>
+            <a href="advanced-search.html"><button class="button button-top">Advanced Search</button></a>    
+        </div>
+
+        <a href="https://doodles.google/"><img src="image/logo.png" id="logo"></a>
+        <form action="https://www.google.com/search"> <!-- when the form is submitted, send the data to the given url -->
+            <input id="searchBox" class="searchInput" type="text" name="q" placeholder="🔍"> <!-- what the user types into this input field will be added as a GET param to the url -->
+            <br>
+            <input class="searchInput button" type="submit" value="Boogle Search">
+
+            <!-- when we click the Feeling Lucky button, with devtools Network tab open, we see the redirect url is: https://www.google.com/search?q=hello&btnI=I%27m+Feeling+Lucky&sca_esv=1aa948dbafa5eaee&sxsrf=ACQVn088LO4KT59gQ15Q_pwHP6dPVY5BKA%3A1709287945466&source=hp&ei=CarhZaC1F8Lv2roP9pS20AU&iflsig=ANes7DEAAAAAZeG4GY06Nn2_9uLD6-DeseH4fIyE3dga -->
+            <input class="searchInput button" type="submit" value="I'm Feeling Lucky">
+            <input type="hidden" name="btnI" value="I'm Feeling Lucky"> <!-- notice: don't copy value directly from above; format it with apostrophe & spaces -->
+        </form>
+    </body>
+</html>
+
