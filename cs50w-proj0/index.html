@@ -3,7 +3,7 @@
     <head>
         <title>Boogle Search</title>
         <link rel="icon" type="image/favicon" href="image/favicon.png">
-        <link rel="stylesheet" href="styles.css"> <!-- "relationship" -->
+        <link rel="stylesheet" href="styles.css"> <!-- rel: "relationship" -->
     </head>
     <body>
         <div class="flex-container-inner">
@@ -18,10 +18,11 @@
             <br>
             <button class="searchInput button" type="submit">Boogle Search</button>
 
-            <!-- when we click the Feeling Lucky button, with devtools Network tab open, we see the redirect url is: https://www.google.com/search?q=hello&btnI=I%27m+Feeling+Lucky&sca_esv=1aa948dbafa5eaee&sxsrf=ACQVn088LO4KT59gQ15Q_pwHP6dPVY5BKA%3A1709287945466&source=hp&ei=CarhZaC1F8Lv2roP9pS20AU&iflsig=ANes7DEAAAAAZeG4GY06Nn2_9uLD6-DeseH4fIyE3dga -->
-            <!-- Do NOT use hidden input for the Lucky button because we have multiple submit buttons, so if we used it, it would apply to both buttons. We only want to apply the URL param for I'm Feeling Lucky when we click the Lucky button, so attach those details to the button itself - do not have a separate hidden input because it won't work. -->
+            <!-- when we click the Lucky button in Google, with devtools Network tab open, we see the redirect url is: https://www.google.com/search?q=hello&btnI=I%27m+Feeling+Lucky&sca_esv=1aa948dbafa5eaee&sxsrf=ACQVn088LO4KT59gQ15Q_pwHP6dPVY5BKA%3A1709287945466&source=hp&ei=CarhZaC1F8Lv2roP9pS20AU&iflsig=ANes7DEAAAAAZeG4GY06Nn2_9uLD6-DeseH4fIyE3dga -->
+            <!-- Do NOT use hidden input for the Lucky button because we have multiple submit buttons, so if we used it, it would apply to both buttons. We only want to apply the URL param for I'm Feeling Lucky if we click the Lucky button, so attach those details to the button itself - do not have a separate hidden input because it won't work. -->
             <!-- btnI: name of the URL param -->
-            <!-- value="I'm Feeling Lucky": value of the URL param. Note that we don't write it as in a URL (I%27m+Feeling+Lucky); we format it with apostrophe and spaces. -->
+            <!-- value="I'm Feeling Lucky": value of the URL param. Note that we don't write it as in the Google URL (I%27m+Feeling+Lucky); we format it with apostrophe and spaces. -->
+            <!-- use <button> instead of <input> because <input> is self-closing (https://stackoverflow.com/a/55009889/8042538) -->
             <button class="searchInput button" name="btnI" value="I'm Feeling Lucky" type="submit">I'm Feeling Lucky</button>
         </form>
     </body>
