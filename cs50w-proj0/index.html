@@ -12,15 +12,17 @@
         </div>
 
         <a href="https://doodles.google/"><img src="image/logo.png" id="logo"></a>
+        
         <form action="https://www.google.com/search"> <!-- when the form is submitted, send the data to the given url -->
             <input id="searchBox" class="searchInput" type="text" name="q" placeholder="🔍"> <!-- what the user types into this input field will be added as a GET param to the url -->
             <br>
-            <input class="searchInput button" type="submit" value="Boogle Search">
+            <button class="searchInput button" type="submit">Boogle Search</button>
 
             <!-- when we click the Feeling Lucky button, with devtools Network tab open, we see the redirect url is: https://www.google.com/search?q=hello&btnI=I%27m+Feeling+Lucky&sca_esv=1aa948dbafa5eaee&sxsrf=ACQVn088LO4KT59gQ15Q_pwHP6dPVY5BKA%3A1709287945466&source=hp&ei=CarhZaC1F8Lv2roP9pS20AU&iflsig=ANes7DEAAAAAZeG4GY06Nn2_9uLD6-DeseH4fIyE3dga -->
-            <input class="searchInput button" type="submit" value="I'm Feeling Lucky">
-            <input type="hidden" name="btnI" value="I'm Feeling Lucky"> <!-- notice: don't copy value directly from above; format it with apostrophe & spaces -->
+            <!-- Do NOT use hidden input for the Lucky button because we have multiple submit buttons, so if we used it, it would apply to both buttons. We only want to apply the URL param for I'm Feeling Lucky when we click the Lucky button, so attach those details to the button itself - do not have a separate hidden input because it won't work. -->
+            <!-- btnI: name of the URL param -->
+            <!-- value="I'm Feeling Lucky": value of the URL param. Note that we don't write it as in a URL (I%27m+Feeling+Lucky); we format it with apostrophe and spaces. -->
+            <button class="searchInput button" name="btnI" value="I'm Feeling Lucky" type="submit">I'm Feeling Lucky</button>
         </form>
     </body>
 </html>
-
